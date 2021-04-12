@@ -1,6 +1,7 @@
 package main;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -10,9 +11,15 @@ import java.net.Socket;
 
 import com.google.gson.Gson;
 
+import processing.core.PApplet;
+
 public class TCPConexion extends Thread{
 	
 	private Main ref;
+	private Socket socket;
+	private BufferedWriter writer;
+	private BufferedReader reader;
+	
 	
 	public void run () {
 		
