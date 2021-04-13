@@ -44,9 +44,8 @@ public class TCPConexion extends Thread{
 					Gson gson = new Gson();
 					
 					Coordenada jugadorN = gson.fromJson(jugadorRecibido, Coordenada.class);
-					if(jugadorN.getJugador().contentEquals("j1")) {
-					ref.avanzar(jugadorN);
-					}
+					ref.avanzar(jugadorN, this);
+					
 				}
 
 			} catch (IOException e) {

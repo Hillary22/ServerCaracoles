@@ -6,9 +6,11 @@ import processing.core.PImage;
 public class Main extends PApplet{
 	
 	PImage background,caracol1,caracol2,tonelada,velo;
-	int vel,posx1,posy1,posx2,posy2;
+	int vel,posx1,posx2;
+	int posy1, posy2;
 	private TCPConexion conexion;
 	private String jugador1avanza;
+	JugadorUno jugador1;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -18,8 +20,6 @@ public class Main extends PApplet{
 	public void settings() {
 		size(360, 640);
 		background = loadImage("../img/bg.png");
-		
-	
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
 		posy1 = 510;
@@ -30,20 +30,25 @@ public class Main extends PApplet{
 		conexion = new TCPConexion();
 		conexion.setMain(this);
 		conexion.start();
+		jugador1 = new JugadorUno(70,posy1,50,this);
+		
 		
 	}
 	
-public void avanzar(Coordenada jugadorN) {
+public void avanzar(Coordenada jugadorN, Object obj) {
 		
 		System.out.println(jugadorN.getJugador());
 		
-		jugador1avanza = jugadorN.getAvanzar();
-		
-		if (jugador1avanza == "si") {
-			posy1 = + vel;
-			
+		if (obj instanceof TCPConexion) {
+			switch(jugadorN.getAvanzar()) {
+			case "goUP":
+				jugador1.avanzar();
+				break;
+			}
 		}
-
+		
+		
+		
 	}
 	
 	public void draw() {
@@ -53,6 +58,8 @@ public void avanzar(Coordenada jugadorN) {
     	textSize(29);
     	ellipse(70,posy1,50,50);
     	text("x="+mouseX+"y="+mouseY,mouseX,mouseY);
+    	jugador1.retroceder();
+    	jugador1.pintarJ();
     	
 	}
 
