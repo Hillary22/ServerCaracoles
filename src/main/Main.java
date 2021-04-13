@@ -18,8 +18,8 @@ public class Main extends PApplet{
 	public void settings() {
 		size(360, 640);
 		background = loadImage("../img/bg.png");
-		caracol1 = loadImage("../img/p1.png");
-		caracol2 = loadImage("../img/p2.png");
+		
+	
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
 		posy1 = 510;
