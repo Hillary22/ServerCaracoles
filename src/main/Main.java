@@ -5,10 +5,10 @@ import processing.core.PImage;
 
 public class Main extends PApplet{
 	
-	PImage background,caracol1,caracol2,tonelada,velo, win;
+	PImage background,caracol1,caracol2,tonelada,velo, win1, win2;
 	int vel,posx1,posx2;
 	int posy1, posy2;
-	int time, second, view;
+	int time, second, view, playerswin;
 	private TCPConexion conexion;
 	private String jugador1avanza;
 	JugadorUno jugador1;
@@ -34,7 +34,9 @@ public class Main extends PApplet{
 		background = loadImage("../img/pista.png");
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
-		win = loadImage("../img/wpviolet.png");
+		win1 = loadImage("../img/winv.png");
+		win2 = loadImage("../img/winy.png");
+
 	}
 	
 public void avanzar(Coordenada jugadorN, Object obj) {
@@ -80,13 +82,26 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 		
 		case 1:
 			imageMode(CORNER);
-			image(win, 0,0, width, height);
+			image(win1, 0,0, width, height);
 			break;
-
+		case 2:
+			imageMode(CORNER);
+			image(win2,0,0, width, height);
+			break;
 
 		}
 		
     	
 	}
 
+	public void win() {
+	//pensando
+	
+	if (posx1>80 && posy1>84 && posx1<280 && posy1<126) {
+		view = 1;
+		} else {
+			view = 2;
+		}	
+	}
+	
 }
