@@ -25,7 +25,15 @@ public abstract class  Jugador {
 	}
 	
 	public void avanzar() {
-		this.posY = posY-4;
+		this.posY = posY - 4;
+	}
+	
+	public void irDerecha() {
+		this.posX = posX + 10;
+	}
+	
+	public void irIzquierda() {
+		this.posX = posX - 10;
 	}
 
 	public abstract void pintarJ() ;

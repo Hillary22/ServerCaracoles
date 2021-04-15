@@ -48,6 +48,12 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			case "goUP":
 				jugador1.avanzar();
 				break;
+			case "goLeft":
+				jugador1.irIzquierda();
+				break;
+			case "goRight":
+				jugador1.irDerecha();
+				break;
 			}
 		}
 		
@@ -61,9 +67,6 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			imageMode(CORNER);
 			image(background,0,0,width,height);
 		
-//			fill(0);
-//	    	textSize(29);
-//	    	ellipse(70,posy1,50,50);
 	    	text("x="+mouseX+"y="+mouseY,mouseX,mouseY);
 	    	jugador1.retroceder();
 	    	jugador1.pintarJ();
