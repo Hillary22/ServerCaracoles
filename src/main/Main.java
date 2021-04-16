@@ -35,7 +35,7 @@ public class Main extends PApplet{
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
 		win1 = loadImage("../img/gv.png");
-		win2 = loadImage("../img/winy.png");
+		win2 = loadImage("../img/gyvoy.png");
 		clock = loadImage("../img/clock.png");
 
 

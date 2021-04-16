@@ -15,7 +15,6 @@ public class JugadorDos extends Jugador{
 	public void pintarJ() {
 
 
-		app.image(this.caracol2, this.posX, this.posY, 35, 50);
 
 		app.image(this.caracol2, this.posX, this.posY, 34, 94);
 
