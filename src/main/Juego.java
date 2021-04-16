@@ -34,7 +34,7 @@ public class Juego {
 			
 				if(habilidades.get(i) instanceof MasVelocidad) {
 					temporalH = (int)Math.floor(app.millis()/1000) ;
-					j1.vel= 3;
+					//j1.vel= 3;
 					System.out.println();
 					//j2.vel= 1;
 			}else {j1.vel= 1;}
