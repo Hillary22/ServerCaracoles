@@ -7,6 +7,7 @@ import processing.core.PImage;
 public class MasVelocidad extends Habilidad{
 	
 	private PImage velo;
+	boolean atrapaVelo= false;
 
 	public MasVelocidad(int x, int y, PApplet app) {
 		super(x, y, app);
@@ -22,7 +23,7 @@ public class MasVelocidad extends Habilidad{
 
 	@Override
 	public boolean tomoH(JugadorUno j1) {
-		boolean atrapaVelo= false;
+		
 		float v1 = app.dist(j1.posX, j1.posY,getX(), getY());
 		
 		if (j1.posX>=150 || j1.posX<=195) {
