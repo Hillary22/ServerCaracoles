@@ -15,7 +15,7 @@ public abstract class Habilidad {
 	}
 	
 	public abstract void pintarH(); 
-	public abstract boolean tomoH(JugadorUno j1, JugadorDos j2);
+	public abstract boolean tomoH(JugadorUno j1);
 
 	public PApplet getApp() {
 		return app;

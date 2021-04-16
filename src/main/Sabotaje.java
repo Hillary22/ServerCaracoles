@@ -21,12 +21,12 @@ public class Sabotaje extends Habilidad{
 	
 
 	@Override
-	public boolean tomoH(JugadorUno j1, JugadorDos j2) {
+	public boolean tomoH(JugadorUno j1) {
 		boolean atrapaTone= false;
 		float t1 = app.dist(j1.posX, j1.posY,getX(), getY());
-		float t2 = app.dist(j2.posX, j2.posY,getX(), getY());
+
 		
-		if (t1>=0 && t2>=0) {
+		if (t1>=0) {
 			atrapaTone=true;
 		}
 		return atrapaTone;
