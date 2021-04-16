@@ -33,13 +33,13 @@ public class Main extends PApplet{
 		conexion.setMain(this);
 		conexion.start();
 		jugador1 = new JugadorUno(70,posy1,50,this);
-		mv = new MasVelocidad(150, 250, this);
-		st = new Sabotaje(150, 400, this);
+		mv = new MasVelocidad(150, 350, this);
+		st = new Sabotaje(150, 200, this);
 		background = loadImage("../img/back.png");
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
 		win1 = loadImage("../img/gv.png");
-		win2 = loadImage("../img/gyvoy.png");
+		win2 = loadImage("../img/gy.png");
 		clock = loadImage("../img/clock.png");
 		
 
@@ -82,6 +82,7 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			
 			//habilidades
 				//Más velocidad
+			
 				mv.pintarH();
 			
 				//Sabotaje Tonelada
