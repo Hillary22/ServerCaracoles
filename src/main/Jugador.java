@@ -18,9 +18,12 @@ public abstract class  Jugador {
 	
 	public void retroceder() {
 		counter ++;
-		if(posY <= 600 && counter == 20) {
-		counter = 0;
+		if(this.posY <= 600 && counter == 20) {
 		this.posY += 3;
+		}
+		
+		if(counter == 20) {
+			counter = 0;
 		}
 	}
 	
@@ -29,11 +32,15 @@ public abstract class  Jugador {
 	}
 	
 	public void irDerecha() {
+		if(this.posX <= 288) {
 		this.posX = posX + 10;
+		}
 	}
 	
 	public void irIzquierda() {
+		if(this.posX >= 70) {
 		this.posX = posX - 10;
+		}
 	}
 
 	public abstract void pintarJ() ;
