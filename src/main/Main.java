@@ -83,10 +83,10 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			//habilidades
 				//Más velocidad
 			
-				mv.pintarH();
+				mv.pintarH(jugador1);
 			
 				//Sabotaje Tonelada
-				st.pintarH();
+				st.pintarH(jugador1);
 
 	    	//time
 	    	textSize(18);

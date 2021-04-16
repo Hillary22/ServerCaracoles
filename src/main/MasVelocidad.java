@@ -14,10 +14,10 @@ public class MasVelocidad extends Habilidad{
 	}
 
 	@Override
-	public void pintarH() {
+	public void pintarH(JugadorUno j1) {
 		app.imageMode(PConstants.CORNER);
 		app.image(velo,getX(),getY(),50,50);
-		
+		tomoH(j1);
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class MasVelocidad extends Habilidad{
 		boolean atrapaVelo= false;
 		float v1 = app.dist(j1.posX, j1.posY,getX(), getY());
 		
-		if (j1.posX>=150 || j1.posX<=195) {
+		if (j1.posX>=150 && j1.posX<=195 && j1.posY>=352 && j1.posY<=384) {
 			atrapaVelo=true;
 			System.out.println("aja");
 

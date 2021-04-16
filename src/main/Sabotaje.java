@@ -13,9 +13,9 @@ public class Sabotaje extends Habilidad{
 	}
 
 	@Override
-	public void pintarH() {
+	public void pintarH(JugadorUno j1) {
 		app.image(tone,getX(),getY(),50,50);
-		
+		tomoH(j1);
 	}
 
 	
