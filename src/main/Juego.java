@@ -1,5 +1,7 @@
 package main;
 
+import java.util.ArrayList;
+
 import processing.core.PApplet;
 
 public class Juego {
@@ -8,7 +10,8 @@ public class Juego {
 	private TCPConexion conexion;
 	private JugadorUno j1;
 	private JugadorDos j2;
-	
+	private ArrayList<Habilidad> habilidades;
+	private int temporalH;//variable para tiempo de habilidades 
 	private int pantalla =0;
 	
 	public Juego(PApplet app) {
@@ -21,6 +24,20 @@ public class Juego {
 	//pintar pantallas
 	public void pintarP() {
 		
+	}
+	
+	public void VerSitomoH() {
+		for (int i = 0; i < habilidades.size(); i++) {
+		if(habilidades.get(i).tomoH( j1,  j2)) {
+			
+			if(habilidades.get(i) instanceof MasVelocidad) {
+				 temporalH = (int)Math.floor(app.millis()/1000) ;
+				
+			}
+			
+		}
+		
+		}
 	}
 	
 }
