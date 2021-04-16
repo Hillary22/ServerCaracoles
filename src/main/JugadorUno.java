@@ -9,13 +9,13 @@ public class JugadorUno extends Jugador{
 
 	public JugadorUno(int posX, int posY, int vel, PApplet app) {
 		super(posX, posY, vel, app);
-		caracol1 = app.loadImage("../img/p1.png");
+		caracol1 = app.loadImage("../img/p2.png");
 		
 	}
 
 	public void pintarJ() {
 
-		app.image(this.caracol1, this.posX, this.posY, 50, 50);
+		app.image(this.caracol1, this.posX, this.posY, 34, 94);
 	}
 
 	

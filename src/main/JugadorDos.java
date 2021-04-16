@@ -9,12 +9,12 @@ public class JugadorDos extends Jugador{
 	
 	public JugadorDos(int posX, int posY, int vel, PApplet app) {
 		super(posX, posY, vel, app);
-		caracol2 = app.loadImage("../img/p2.png");
+		caracol2 = app.loadImage("../img/p1.png");
 	}
 
 	public void pintarJ() {
 
-		app.image(this.caracol2, this.posX, this.posY, 50, 50);
+		app.image(this.caracol2, this.posX, this.posY, 34, 94);
 	}
 
 	
