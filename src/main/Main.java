@@ -12,6 +12,8 @@ public class Main extends PApplet{
 	private TCPConexion conexion;
 	private String jugador1avanza;
 	JugadorUno jugador1;
+	private MasVelocidad mv;
+	private Sabotaje st;
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -31,12 +33,15 @@ public class Main extends PApplet{
 		conexion.setMain(this);
 		conexion.start();
 		jugador1 = new JugadorUno(70,posy1,50,this);
+		mv = new MasVelocidad(150, 250, this);
+		st = new Sabotaje(150, 400, this);
 		background = loadImage("../img/back.png");
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
 		win1 = loadImage("../img/gv.png");
 		win2 = loadImage("../img/gyvoy.png");
 		clock = loadImage("../img/clock.png");
+		
 
 
 	}
@@ -74,6 +79,13 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 	    	jugador1.retroceder();
 	    	jugador1.pintarJ();
 			image(clock,0,0);
+			
+			//habilidades
+				//Más velocidad
+				mv.pintarH();
+			
+				//Sabotaje Tonelada
+				st.pintarH();
 
 	    	//time
 	    	textSize(18);
