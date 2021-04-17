@@ -106,10 +106,11 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			
 			//habilidades
 			j.pintarHabilidad();
+			j.resetearVelo(time);
 
 	    	//time
 	    	textSize(18);
-			text(time,72,34);
+			text(time+" s",72,34);
 			second = second + 1;
 			if (second == 100) {
 				second = 0;

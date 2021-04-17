@@ -14,6 +14,9 @@ public class Juego {
 	private int temporalH;//variable para tiempo de habilidades 
 	private int sabotajeH;//variable para tiempo de habilidades
 	private int pantalla =0;
+	private boolean J1tomo = false;
+	private boolean J2tomo = false;
+	
 	
 	public Juego(PApplet app) {
 		this.app =app;
@@ -39,8 +42,9 @@ public class Juego {
 			
 				if(habilidades.get(i) instanceof MasVelocidad) {
 					temporalH = (int)Math.floor(app.millis()/1000) ;
+					validarVelo();
 					//j1.vel= 3;
-					System.out.println();
+					System.out.println("soy franchescooooooo FIAAAAUUUNNN");
 					//j2.vel= 1;
 			}else {j1.vel= 1;}
 				
@@ -62,6 +66,29 @@ public class Juego {
 		for (int i = 0; i < habilidades.size(); i++) {
 			habilidades.get(i).pintarH(j1);
 		}
+	}
+	
+	public void resetearVelo(int time) {
+		int tiempoH = time - temporalH;
+		if(tiempoH>4) {
+			j1.vel = 1 ;
+		}else {
+			j2.vel = 1 ;}
+	}
+	
+	public void validarVelo() {
+		
+		if(J1tomo == true) {
+			j1.setVel(3);
+			
+		}
+		else {j1.getVel();}
+		
+		if(J2tomo == true) {
+			j2.setVel(3);
+			
+		}
+		else {j2.getVel();}
 	}
 	
 }
