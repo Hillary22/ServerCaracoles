@@ -16,6 +16,8 @@ public class Juego {
 	private int pantalla =0;
 	private boolean J1tomo = false;
 	private boolean J2tomo = false;
+	private boolean J1tomoS = false;
+	private boolean J2tomoS = false;
 	
 	
 	public Juego(PApplet app) {
@@ -30,12 +32,9 @@ public class Juego {
 		sabotajeH=0;
 	}
 	
-	//pintar pantallas
-	public void pintarP() {
-		
-	}
+
 	
-	public void VerSitomoH() {
+	public void verSitomoH() {
 		
 		for (int i = 0; i < habilidades.size(); i++) {
 			if(habilidades.get(i).tomoH( j1)) {
@@ -52,7 +51,7 @@ public class Juego {
 					
 					if(habilidades.get(i) instanceof Sabotaje) {
 						sabotajeH = (int)Math.floor(app.millis()/1000) ;
-						
+						validarTone();
 				}
 			}
 			habilidades.remove(i);
@@ -65,7 +64,9 @@ public class Juego {
 	public void pintarHabilidad() {
 		for (int i = 0; i < habilidades.size(); i++) {
 			habilidades.get(i).pintarH(j1);
+			
 		}
+		verSitomoH();
 	}
 	
 	public void resetearVelo(int time) {
@@ -91,4 +92,18 @@ public class Juego {
 		else {j2.getVel();}
 	}
 	
+public void validarTone() {
+		
+		if(J1tomoS == true) {
+			j1.setVel(3);
+			
+		}
+		else {j1.getVel();}
+		
+		if(J2tomoS == true) {
+			j2.setVel(3);
+			
+		}
+		else {j2.getVel();}
+	}
 }

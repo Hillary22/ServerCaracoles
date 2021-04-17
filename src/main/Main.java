@@ -44,6 +44,7 @@ public class Main extends PApplet{
 //		mv = new MasVelocidad(150, 350, this);
 //		st = new Sabotaje(150, 200, this);
 		j = new Juego (this) ;
+	
 		 
 		background = loadImage("../img/back.png");
 		tonelada = loadImage("../img/tonelada.png"); 
@@ -97,6 +98,12 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			
 			image(background,0,0,width,height);
 			
+			//habilidades
+			j.pintarHabilidad();
+			j.resetearVelo(time);
+			
+			//jugadores
+			
 	    	text("x="+mouseX+"y="+mouseY,mouseX,mouseY);
 	    	jugador1.retroceder();
 	    	jugador1.pintarJ();
@@ -104,9 +111,7 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 	    	jugador2.pintarJ();
 			image(clock,0,0);
 			
-			//habilidades
-			j.pintarHabilidad();
-			j.resetearVelo(time);
+			
 
 	    	//time
 	    	textSize(18);
