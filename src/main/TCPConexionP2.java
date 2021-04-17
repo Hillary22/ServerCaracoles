@@ -13,7 +13,7 @@ import com.google.gson.Gson;
 
 import processing.core.PApplet;
 
-public class TCPConexion extends Thread{
+public class TCPConexionP2 extends Thread{
 	
 	private Main ref;
 	private Socket socket;
@@ -24,10 +24,10 @@ public class TCPConexion extends Thread{
 	public void run () {
 		
 			try {
-				ServerSocket server = new ServerSocket(5000);
-				System.out.println("Esperando cliente en el canal 5000...");
+				ServerSocket server = new ServerSocket(6000);
+				System.out.println("Esperando cliente en el canal 6000...");
 				Socket socket = server.accept();
-				System.out.println("P1 esta conectado");
+				System.out.println("P2 esta conectado");
 
 				InputStream is = socket.getInputStream();
 				OutputStream os = socket.getOutputStream();

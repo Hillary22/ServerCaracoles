@@ -18,7 +18,7 @@ public abstract class  Jugador {
 	
 	public void retroceder() {
 		counter ++;
-		if(this.posY <= 600 && counter == 20) {
+		if(this.posY <= 514 && counter == 20) {
 		this.posY += 3;
 		}
 		

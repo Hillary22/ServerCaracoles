@@ -7,11 +7,13 @@ public class Main extends PApplet{
 	
 	PImage background,caracol1,caracol2,tonelada,velo, win1, win2, clock;
 	int vel,posx1,posx2;
-	int posy1, posy2;
+	int posy;
 	int time, second, view, playerswin;
-	private TCPConexion conexion;
+	private TCPConexion conexionP1;
+	private TCPConexionP2 conexionP2;
 	private String jugador1avanza;
 	JugadorUno jugador1;
+	JugadorDos jugador2;
 	private MasVelocidad mv;
 	private Sabotaje st;
 
@@ -26,13 +28,17 @@ public class Main extends PApplet{
 	}
 	public void setup() {
 		
-		posy1 = 510;
+		posy = 510;
 		vel = 1;
 		time=0;
-		conexion = new TCPConexion();
-		conexion.setMain(this);
-		conexion.start();
-		jugador1 = new JugadorUno(70,posy1,50,this);
+		conexionP1 = new TCPConexion();
+		conexionP1.setMain(this);
+		conexionP1.start();
+		conexionP2 = new TCPConexionP2();
+		conexionP2.setMain(this);
+		conexionP2.start();
+		jugador1 = new JugadorUno(110,posy,50,this);
+		jugador2 = new JugadorDos(220,posy,50,this);
 		mv = new MasVelocidad(150, 350, this);
 		st = new Sabotaje(150, 200, this);
 		background = loadImage("../img/back.png");
@@ -64,6 +70,20 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			}
 		}
 		
+		if (obj instanceof TCPConexionP2) {
+			switch(jugadorN.getAvanzar()) {
+			case "goUP":
+				jugador2.avanzar();
+				break;
+			case "goLeft":
+				jugador2.irIzquierda();
+				break;
+			case "goRight":
+				jugador2.irDerecha();
+				break;
+			}
+		}
+		
 		
 		
 	}
@@ -78,6 +98,8 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 	    	text("x="+mouseX+"y="+mouseY,mouseX,mouseY);
 	    	jugador1.retroceder();
 	    	jugador1.pintarJ();
+	    	jugador2.retroceder();
+	    	jugador2.pintarJ();
 			image(clock,0,0);
 			
 			//habilidades
