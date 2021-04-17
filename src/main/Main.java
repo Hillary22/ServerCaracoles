@@ -100,8 +100,8 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			
 			//habilidades
 		//	j.pintarHabilidad();
-			mv.tomoH(jugador1, jugador2);
-			st.tomoH(jugador1, jugador2);
+			mv.pintarH(jugador1, jugador2);
+			st.pintarH(jugador1, jugador2);
 			j.verSitomoH();
 			
 			j.resetearVelo(time);
