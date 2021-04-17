@@ -34,6 +34,11 @@ public class Sabotaje extends Habilidad{
 			System.out.println("aja");
 			
 		}
+		if (j2.posX>=150 && j2.posX<=195 && j2.posY>=352 && j2.posY<=384) {
+			atrapaTone=true;
+			System.out.println("aja");
+			
+		}
 			
 		
 		return atrapaTone;

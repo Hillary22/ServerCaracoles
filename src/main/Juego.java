@@ -64,9 +64,9 @@ public class Juego {
 	public void pintarHabilidad() {
 		for (int i = 0; i < habilidades.size(); i++) {
 			habilidades.get(i).pintarH(j1, j2);
-			
+			verSitomoH();
 		}
-		verSitomoH();
+		
 	}
 	 	
 	public void resetearVelo(int time) {

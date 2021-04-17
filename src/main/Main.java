@@ -41,8 +41,8 @@ public class Main extends PApplet{
 		conexionP2.start();
 		jugador1 = new JugadorUno(110,posy,50,this);
 		jugador2 = new JugadorDos(220,posy,50,this);
-//		mv = new MasVelocidad(150, 350, this);
-//		st = new Sabotaje(150, 200, this);
+		mv = new MasVelocidad(150, 350, this);
+		st = new Sabotaje(150, 200, this);
 		j = new Juego (this) ;
 	
 		 
@@ -99,7 +99,11 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			image(background,0,0,width,height);
 			
 			//habilidades
-			j.pintarHabilidad();
+		//	j.pintarHabilidad();
+			mv.tomoH(jugador1, jugador2);
+			st.tomoH(jugador1, jugador2);
+			j.verSitomoH();
+			
 			j.resetearVelo(time);
 			
 			//jugadores
