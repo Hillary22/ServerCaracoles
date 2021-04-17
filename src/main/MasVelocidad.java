@@ -16,12 +16,12 @@ public class MasVelocidad extends Habilidad{
 	}
 
 	@Override
-	public void pintarH(JugadorUno j1) {
+	public void pintarH(JugadorUno j1, JugadorDos j2) {
 		
 		if(atrapaVelo == false) {
 			app.imageMode(PConstants.CORNER);
 			app.image(velo,getX(),getY(),50,50);
-			//tomoH(j1);
+			tomoH(j1, j2);
 		}
 		
 		
@@ -29,7 +29,7 @@ public class MasVelocidad extends Habilidad{
 
 
 	@Override
-	public boolean tomoH(JugadorUno j1) {
+	public boolean tomoH(JugadorUno j1, JugadorDos j2) {
 		
 		//float v1 = app.dist(j1.posX, j1.posY,getX(), getY());
 		

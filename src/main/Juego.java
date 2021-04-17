@@ -37,7 +37,7 @@ public class Juego {
 	public void verSitomoH() {
 		
 		for (int i = 0; i < habilidades.size(); i++) {
-			if(habilidades.get(i).tomoH( j1)) {
+			if(habilidades.get(i).tomoH( j1,j2)) {
 			
 				if(habilidades.get(i) instanceof MasVelocidad) {
 					temporalH = (int)Math.floor(app.millis()/1000) ;
@@ -47,7 +47,7 @@ public class Juego {
 					//j2.vel= 1;
 			}else {j1.vel= 1;}
 				
-				if(habilidades.get(i).tomoH( j1)) {
+				if(habilidades.get(i).tomoH( j1, j2)) {
 					
 					if(habilidades.get(i) instanceof Sabotaje) {
 						sabotajeH = (int)Math.floor(app.millis()/1000) ;
@@ -63,12 +63,12 @@ public class Juego {
 	
 	public void pintarHabilidad() {
 		for (int i = 0; i < habilidades.size(); i++) {
-			habilidades.get(i).pintarH(j1);
+			habilidades.get(i).pintarH(j1, j2);
 			
 		}
 		verSitomoH();
 	}
-	
+	 	
 	public void resetearVelo(int time) {
 		int tiempoH = time - temporalH;
 		if(tiempoH>4) {
@@ -81,7 +81,7 @@ public class Juego {
 		
 		if(J1tomo == true) {
 			j1.setVel(3);
-			
+			System.out.println("a ver si funciona la velocidad");
 		}
 		else {j1.getVel();}
 		
@@ -95,15 +95,15 @@ public class Juego {
 public void validarTone() {
 		
 		if(J1tomoS == true) {
-			j1.setVel(3);
-			
-		}
-		else {j1.getVel();}
-		
-		if(J2tomoS == true) {
-			j2.setVel(3);
+			j2.setVel(-3);
 			
 		}
 		else {j2.getVel();}
+		
+		if(J2tomoS == true) {
+			j1.setVel(-3);
+			
+		}
+		else {j1.getVel();}
 	}
 }

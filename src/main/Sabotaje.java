@@ -14,18 +14,18 @@ public class Sabotaje extends Habilidad{
 	}
 
 	@Override
-	public void pintarH(JugadorUno j1) {
+	public void pintarH(JugadorUno j1, JugadorDos j2) {
 		
 		if(atrapaTone == false) {
 		app.image(tone,getX(),getY(),50,50);
-		//tomoH(j1);
+		tomoH(j1, j2);
 		}
 	}
 
 	
 
 	@Override
-	public boolean tomoH(JugadorUno j1) {
+	public boolean tomoH(JugadorUno j1, JugadorDos j2) {
 		
 		//float t1 = app.dist(j1.posX, j1.posY,getX(), getY());
 
