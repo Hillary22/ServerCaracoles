@@ -43,7 +43,8 @@ public class Main extends PApplet{
 		jugador2 = new JugadorDos(220,posy,50,this);
 //		mv = new MasVelocidad(150, 350, this);
 //		st = new Sabotaje(150, 200, this);
-
+		j = new Juego (this) ;
+		 
 		background = loadImage("../img/back.png");
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
@@ -86,8 +87,6 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 				break;
 			}
 		}
-		
-		
 		
 	}
 	
@@ -144,6 +143,9 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 		
 		if (jugador1.getPosX()>=70 && jugador1.getPosY()>0 && jugador1.getPosX()<280 && jugador1.getPosY()<84) {
 			view = 1;
+			}
+		if (jugador2.getPosX()>=70 && jugador2.getPosY()>0 && jugador2.getPosX()<280 && jugador2.getPosY()<84) {
+			view = 2;
 			}	
 		}
 	
