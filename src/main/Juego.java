@@ -42,9 +42,9 @@ public class Juego {
 				if(habilidades.get(i) instanceof MasVelocidad) {
 					temporalH = (int)Math.floor(app.millis()/1000) ;
 					validarVelo();
-					//j1.vel= 3;
+					
 					System.out.println("soy franchescooooooo FIAAAAUUUNNN");
-					//j2.vel= 1;
+					
 			}else {j1.vel= 1;}
 				
 				if(habilidades.get(i).tomoH( j1, j2)) {
