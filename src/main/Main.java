@@ -51,8 +51,8 @@ public class Main extends PApplet{
 		background = loadImage("../img/back.png");
 		tonelada = loadImage("../img/tonelada.png"); 
 		velo = loadImage("../img/vel.png");
-		win1 = loadImage("../img/gv.png");
-		win2 = loadImage("../img/gy.png");
+		win1 = loadImage("../img/gye.png");
+		win2 = loadImage("../img/gve.png");
 		clock = loadImage("../img/clock.png");
 		
 
@@ -136,7 +136,7 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			imageMode(CORNER);
 			image(win1, 0,0, width, height);
 			textSize(18);
-			text(time, 192, 414);
+			text(time, 185, 282);
 			
 			break;
 		case 2:

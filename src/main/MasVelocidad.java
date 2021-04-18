@@ -19,7 +19,7 @@ public class MasVelocidad extends Habilidad{
 	public void pintarH(JugadorUno j1, JugadorDos j2) {
 		
 		if(atrapaVelo == false) {
-			app.imageMode(PConstants.CORNER);
+			
 			app.image(velo,getX(),getY(),50,50);
 			tomoH(j1, j2);
 		}
@@ -33,14 +33,14 @@ public class MasVelocidad extends Habilidad{
 		
 		//float v1 = app.dist(j1.posX, j1.posY,getX(), getY());
 		
-		if (j1.posX>=161 && j1.posX<=195 && j1.posY>=349 && j1.posY<=390) {
+		if (j1.posX>=159 && j1.posX<=195 && j1.posY>=349 && j1.posY<=390) {
 			atrapaVelo=true;
 			System.out.println("aja");
 			
 		}
 		
 		
-		if (j2.posX>=161 && j2.posX<=195 && j2.posY>=349 && j2.posY<=390) {
+		if (j2.posX>=159 && j2.posX<=195 && j2.posY>=349 && j2.posY<=390) {
 			atrapaVelo=true;
 			System.out.println("aja");
 			
