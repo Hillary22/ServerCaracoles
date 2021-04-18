@@ -1,5 +1,7 @@
 package main;
 
+import com.google.gson.Gson;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -147,12 +149,21 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 		}
 		
 	}
+	
+	public void sendMessage(String msg) {
+        conexionP1.enviarMensaje(msg);
 
+    }
 	public void win() {
 		//pensando
 		
 		if (jugador1.getPosX()>=70 && jugador1.getPosY()>0 && jugador1.getPosX()<280 && jugador1.getPosY()<84) {
+//			Gson gson = new Gson();
+//            Perder perder = new Perder(perdio);
+//            String ganar = gson.toJson(perder);
+//			sendMessage("Ganó J1");
 			view = 1;
+			
 			}
 		if (jugador2.getPosX()>=70 && jugador2.getPosY()>0 && jugador2.getPosX()<280 && jugador2.getPosY()<84) {
 			view = 2;
