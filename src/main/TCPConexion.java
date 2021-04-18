@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -34,7 +35,10 @@ public class TCPConexion extends Thread{
 
 				InputStreamReader isr = new InputStreamReader(is);
 				BufferedReader breader = new BufferedReader(isr);
-
+				
+				OutputStreamWriter osw = new OutputStreamWriter(os);
+                writer = new BufferedWriter(osw);
+                
 				while (true) {
 					
 					System.out.println("Esperando mensaje...");
@@ -54,6 +58,18 @@ public class TCPConexion extends Thread{
 			}
 	
 	}
+	
+	public void enviarMensaje(String msg){
+        new Thread(() -> {
+            try {
+                writer.write(msg + "\n");
+                writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }).start();
+    }
+	
 	public void setMain(Main main) {
 		this.ref =  main;
 		
