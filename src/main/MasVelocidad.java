@@ -33,11 +33,19 @@ public class MasVelocidad extends Habilidad{
 		
 		//float v1 = app.dist(j1.posX, j1.posY,getX(), getY());
 		
-		if (j1.posX>=30 && j1.posX<=195 && j1.posY>=566 && j1.posY<=700) {
+		if (j1.posX>=161 && j1.posX<=195 && j1.posY>=349 && j1.posY<=390) {
 			atrapaVelo=true;
 			System.out.println("aja");
 			
 		}
+		
+		
+		if (j2.posX>=161 && j2.posX<=195 && j2.posY>=349 && j2.posY<=390) {
+			atrapaVelo=true;
+			System.out.println("aja");
+			
+		}
+	
 		return atrapaVelo;
 	}
 

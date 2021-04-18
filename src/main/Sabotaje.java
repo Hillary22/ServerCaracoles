@@ -29,7 +29,12 @@ public class Sabotaje extends Habilidad{
 		
 		//float t1 = app.dist(j1.posX, j1.posY,getX(), getY());
 
-		if (j1.posX>=150 && j1.posX<=195 && j1.posY>=352 && j1.posY<=384) {
+		if (j1.posX>=157 && j1.posX<=192 && j1.posY>=202 && j1.posY<=240) {
+			atrapaTone=true;
+			System.out.println("aja");
+			
+		}
+		if (j2.posX>=157 && j2.posX<=192 && j2.posY>=202 && j2.posY<=240) {
 			atrapaTone=true;
 			System.out.println("aja");
 			
