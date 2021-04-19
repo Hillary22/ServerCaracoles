@@ -104,7 +104,7 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 		//	j.pintarHabilidad();
 			mv.pintarH(jugador1, jugador2);
 			st.pintarH(jugador1, jugador2);
-			j.verSitomoH();
+			j.validarVelo();
 			
 			j.resetearVelo(time);
 			

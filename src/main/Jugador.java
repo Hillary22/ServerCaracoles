@@ -6,7 +6,7 @@ public abstract class  Jugador {
 	protected PApplet app;
 	protected int posX;
 	protected int posY;
-	protected int vel;
+	protected int vel = 1;
 	private int counter = 0;
 	private boolean retroceder, avanzar, goLeft, goRight;
 	
@@ -28,7 +28,7 @@ public abstract class  Jugador {
 	}
 	
 	public void avanzar() {
-		this.posY = posY - 4;
+		this.posY = posY - 4*vel;
 	}
 	
 	public void irDerecha() {

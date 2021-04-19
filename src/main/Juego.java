@@ -32,39 +32,10 @@ public class Juego {
 		sabotajeH=0;
 	}
 	
-
-	
-	public void verSitomoH() {
-		
-		for (int i = 0; i < habilidades.size(); i++) {
-			if(habilidades.get(i).tomoH( j1,j2)) {
-			
-				if(habilidades.get(i) instanceof MasVelocidad) {
-					temporalH = (int)Math.floor(app.millis()/1000) ;
-					validarVelo();
-					
-					System.out.println("soy franchescooooooo FIAAAAUUUNNN");
-					
-			}else {j1.vel= 1;}
-				
-				if(habilidades.get(i).tomoH( j1, j2)) {
-					
-					if(habilidades.get(i) instanceof Sabotaje) {
-						sabotajeH = (int)Math.floor(app.millis()/1000) ;
-						validarTone();
-				}
-			}
-			habilidades.remove(i);
-		}
-		
-	}
-}
-	
 	
 	public void pintarHabilidad() {
 		for (int i = 0; i < habilidades.size(); i++) {
 			habilidades.get(i).pintarH(j1, j2);
-			verSitomoH();
 		}
 		
 	}
@@ -80,7 +51,7 @@ public class Juego {
 	public void validarVelo() {
 		
 		if(J1tomo == true) {
-			j1.setVel(3);
+			j1.setVel(20);
 			System.out.println("a ver si funciona la velocidad");
 		}
 		else {j1.getVel();}
