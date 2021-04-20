@@ -12,7 +12,7 @@ public class MasVelocidad extends Habilidad{
 	private boolean J2tomo = false;
 	private boolean startTimer = false;
 	private int temporalH = 1;
-	private int timer = 1;
+	private int timer = 0;
 	
 
 	public MasVelocidad(int x, int y, PApplet app) {

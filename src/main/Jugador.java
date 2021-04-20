@@ -7,6 +7,7 @@ public abstract class  Jugador {
 	protected int posX;
 	protected int posY;
 	protected int vel = 1;
+	protected int retro = 1;
 	private int counter = 0;
 	private boolean retroceder, avanzar, goLeft, goRight;
 	
@@ -19,7 +20,7 @@ public abstract class  Jugador {
 	public void retroceder() {
 		counter ++;
 		if(this.posY <= 514 && counter == 20) {
-		this.posY += 3;
+		this.posY += 3*retro;
 		}
 		
 		if(counter == 20) {
@@ -75,6 +76,15 @@ public abstract class  Jugador {
 	public void setVel(int vel) {
 		this.vel = vel;
 	}
+
+	public int getRetro() {
+		return retro;
+	}
+
+	public void setRetro(int retro) {
+		this.retro = retro;
+	}
+	
 	
 	
 }
