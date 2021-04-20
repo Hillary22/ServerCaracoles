@@ -143,7 +143,7 @@ public void avanzar(Coordenada jugadorN, Object obj) {
 			imageMode(CORNER);
 			image(win2,0,0, width, height);
 			textSize(18);
-			text(time, 192, 414);
+			text(time, 185, 282);
 			break;
 
 		}
