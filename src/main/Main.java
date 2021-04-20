@@ -31,7 +31,7 @@ public class Main extends PApplet{
 	}
 	public void setup() {
 		
-		view = 3;
+		view = 0;
 		posy = 510;
 		vel = 1;
 		time=0;
