@@ -59,6 +59,8 @@ public class TCPConexion extends Thread{
 	
 	}
 	
+	
+	
 	public void enviarMensaje(String msg){
         new Thread(() -> {
             try {

@@ -13,7 +13,7 @@ public class Juego {
 	private ArrayList<Habilidad> habilidades;
 	private int temporalH;//variable para tiempo de habilidades 
 	private int sabotajeH;//variable para tiempo de habilidades
-	private int pantalla =0;
+	private int pantalla = 0;
 	private boolean J1tomo = false;
 	private boolean J2tomo = false;
 	private boolean J1tomoS = false;
@@ -63,7 +63,7 @@ public class Juego {
 		else {j2.getVel();}
 	}
 	
-public void validarTone() {
+	public void validarTone() {
 		
 		if(J1tomoS == true) {
 			j2.setVel(-3);
@@ -78,3 +78,4 @@ public void validarTone() {
 		else {j1.getVel();}
 	}
 }
+

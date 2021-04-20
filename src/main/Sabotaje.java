@@ -82,6 +82,14 @@ public class Sabotaje extends Habilidad{
 		}
 	}
 
+	public boolean isAtrapaTone() {
+		return atrapaTone;
+	}
+
+	public void setAtrapaTone(boolean atrapaTone) {
+		this.atrapaTone = atrapaTone;
+	}
+
 	
 
 }

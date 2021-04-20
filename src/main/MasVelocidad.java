@@ -84,6 +84,15 @@ public class MasVelocidad extends Habilidad{
 		}
 	}
 
+	public boolean isAtrapaVelo() {
+		return atrapaVelo;
+	}
+
+	public void setAtrapaVelo(boolean atrapaVelo) {
+		this.atrapaVelo = atrapaVelo;
+	}
+	
+
 	
 	
 
